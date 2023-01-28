@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+	<h1>Swim Time Converter</h1>
+	<p>Select your course, distance, and event. Input your time and hit convert to get a converted time!</p>
+	<h3>Convert From:</h3>
+	<select>
+		<option>Short Course Yards</option>
+		<option>Short Course Meters</option>
+		<option>Long Course Meters</option>
+	</select>
+	<h3>Convert To:</h3>
+	<select>
+		<option>Short Course Yards</option>
+		<option>Short Course Meters</option>
+		<option>Long Course Meters</option>
+	</select>
+	<p>
+        Distance:
+		<select>
+			<option>50</option>
+			<option>100</option>
+			<option>200</option>
+			<option>400/500</option>
+			<option>800/100</option>
+			<option>1500/1650</option>
+		</select>
+		Event:
+		<select>
+			<option>Freestyle</option>
+			<option>Backstroke</option>
+			<option>Butterfly</option>
+			<option>Breaststroke</option>
+			<option>Individual Medley</option>
+		</select><br>
+		<h3>Your Time:</h3>
+		<input type="text" id="inmin" name="inmin" style="width: 50px" value="Min">:
+		<input type="text" id="insec" name="insec" style="width: 50px" value="Sec">.
+		<input type="text" id="inms" name="inms" style="width: 50px" value ="Ms">
+		<br><br> 
+		<!-- Submit currently clears the form, start here for solution: https://stackoverflow.com/questions/2598904/how-do-i-keep-form-data-after-submitting-the-form-using-javascript 
+			 https://stackoverflow.com/questions/38844743/js-input-type-date-field-keep-values-selected-after-form-submission-->
+		<input type="submit" value="Convert">
+		<br>
+		<h3>Converted Time:</h3>
+		<input type="text" id="inmin" name="inmin" style="width: 50px" value="Min">:
+		<input type="text" id="insec" name="insec" style="width: 50px" value="Sec">.
+		<input type="text" id="inms" name="inms" style="width: 50px" value ="Ms">
+		<br><br>
+		<button type="button" title="Copy the converted time to your clipboard.">Copy</button> 
+		<!-- Confirmation popup implemenetation below based on: https://stackoverflow.com/a/16849202 --> 
+		<!-- Reset implemenetation below based on: https://www.tutorialspoint.com/How-to-clear-all-the-input-in-HTML-forms --> 
+		<input type="reset" title="Reset all fields, including the entry and converted times." value="Reset" onclick="return confirm('Are you sure you would like to reset the fields?')" /> 
+	</p>
+</form>
+</body>
+</html>
